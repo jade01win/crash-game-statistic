@@ -1,0 +1,320 @@
+@charset "UTF-8";
+body {
+  background: #242418;
+  color: lightgrey;
+  margin: 2%;
+}
+body .menu.fixed {
+  background: #332 !important;
+}
+
+.rotated, .stage .title {
+  bottom: 0;
+  position: absolute;
+  transform: rotate(-90deg);
+  transition: 0.2s;
+  width: 100%;
+}
+
+.ui.container.dashboard.grid {
+  margin-top: 3rem;
+}
+.ui.container.dashboard.grid .buttons {
+  margin-bottom: -1rem;
+}
+.ui.container.dashboard.grid .buttons .button {
+  transition: 0.2s;
+}
+.ui.container.dashboard.grid .buttons .button .icon {
+  padding: 0;
+}
+.ui.container.dashboard.grid .buttons .button:hover {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+.ui.container.dashboard.grid .buttons .button:hover .icon {
+  color: white;
+}
+.ui.container.dashboard.grid .divider {
+  color: grey;
+  margin: 1rem -1rem;
+}
+.ui.container.dashboard.grid .column {
+  display: flex;
+  padding: 0 !important;
+}
+
+.statistics {
+  flex-grow: 1;
+}
+
+.statistic {
+  align-self: center;
+  flex-grow: 1 !important;
+}
+.statistic.positive .label,
+.statistic.positive .value {
+  color: green !important;
+}
+.statistic.negative .label,
+.statistic.negative .value {
+  color: #ff9cce !important;
+}
+.statistic .positive,
+.statistic .olive + span {
+  color: green;
+}
+.statistic .neutral {
+  color: #332;
+}
+.statistic .negative,
+.statistic .pink + span {
+  color: #ff9cce;
+}
+.statistic .value + .label {
+  padding-top: 1rem;
+}
+.statistic > .label {
+  color: grey !important;
+}
+.statistic .mini.leaf {
+  margin-left: -0.5rem !important;
+}
+.statistic.left.floated {
+  border-right: 1px solid #332;
+}
+.statistic.left.floated > .value {
+  color: white;
+}
+.statistic.left.floated .label {
+  color: grey;
+}
+
+.chart {
+  padding-left: 1rem;
+}
+.chart .ct-label {
+  color: grey;
+}
+.chart text {
+  fill: white;
+  font-size: 100%;
+}
+.chart line {
+  stroke: dimgrey;
+}
+
+.ct-legend {
+  color: grey;
+  display: flex;
+  font-size: 80%;
+  justify-content: center;
+  padding: 1rem;
+  text-transform: capitalize;
+  z-index: 10;
+}
+.ct-legend:before {
+  color: #505050;
+  content: "Click to toggle →";
+  padding-right: 1rem;
+}
+.ct-legend li {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+.ct-legend li:before {
+  border: 1px solid transparent;
+  border-radius: 0.05rem;
+  content: "";
+  height: 1rem;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 1rem;
+}
+.ct-legend li.inactive:before {
+  background: transparent;
+}
+.ct-legend.ct-legend-inside {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ct-legend .ct-series-0:before {
+  background-color: #d70206;
+  border-color: #d70206;
+}
+.ct-legend .ct-series-1:before {
+  background-color: #f05b4f;
+  border-color: #f05b4f;
+}
+.ct-legend .ct-series-2:before {
+  background-color: #f4c63d;
+  border-color: #f4c63d;
+}
+.ct-legend .ct-series-3:before {
+  background-color: #d17905;
+  border-color: #d17905;
+}
+.ct-legend .ct-series-4:before {
+  background-color: #453d3f;
+  border-color: #453d3f;
+}
+.ct-legend .ct-series-5:before {
+  background-color: #59922b;
+  border-color: #59922b;
+}
+.ct-legend .ct-series-6:before {
+  background-color: #0544d3;
+  border-color: #0544d3;
+}
+.ct-legend .ct-series-7:before {
+  background-color: #6b0392;
+  border-color: #6b0392;
+}
+.ct-legend .ct-series-8:before {
+  background-color: #f05b4f;
+  border-color: #f05b4f;
+}
+.ct-legend .ct-series-9:before {
+  background-color: #dda458;
+  border-color: #dda458;
+}
+.ct-legend .ct-series-10:before {
+  background-color: #eacf7d;
+  border-color: #eacf7d;
+}
+.ct-legend .ct-series-11:before {
+  background-color: #86797d;
+  border-color: #86797d;
+}
+.ct-legend .ct-series-12:before {
+  background-color: #b2c326;
+  border-color: #b2c326;
+}
+.ct-legend .ct-series-13:before {
+  background-color: #6188e2;
+  border-color: #6188e2;
+}
+.ct-legend .ct-series-14:before {
+  background-color: #a748ca;
+  border-color: #a748ca;
+}
+
+.ui.segment {
+  background: transparent;
+  border: none;
+  border-radius: 0 !important;
+  box-shadow: none;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.stage {
+  color: grey;
+  cursor: pointer;
+  height: 20rem;
+  position: relative;
+  transition: 0.2s;
+  background: #1e1e14;
+  width: 3rem;
+}
+.stage .title {
+  padding: 1rem;
+}
+.stage .title input[type=range] {
+  display: none;
+}
+.stage .title input[type=range] + h3 {
+  margin-top: -1rem;
+  padding-top: 1rem;
+}
+.stage .title h3 {
+  white-space: nowrap;
+}
+.stage .title h3 span {
+  display: none;
+}
+.stage > .chart,
+.stage > .content {
+  display: none;
+}
+.stage .right.angle.icon,
+.stage .remove.icon {
+  left: 1rem;
+  top: 0.5rem;
+  position: absolute;
+  transition: 2s;
+}
+.stage .remove.icon:not(.right) {
+  color: #ff9cce !important;
+}
+.stage:not(:first-of-type) {
+  border-left: 1px solid #332;
+}
+.stage.active {
+  background: rgba(51, 51, 34, 0.2);
+  width: 100%;
+}
+.stage.active input {
+  display: flex;
+}
+.stage.active .chart,
+.stage.active .content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.stage.active .chart {
+  flex-direction: column;
+}
+.stage.active .title {
+  border-bottom: 1px solid #332;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  text-align: end;
+  transform: rotate(0deg);
+}
+.stage.active .title h3 {
+  color: white;
+  padding-right: 1rem;
+}
+.stage.active .title h3 span {
+  display: inline-block;
+}
+.stage.active .title h3 > span {
+  border-right: 1px solid #4d4d4d;
+  color: #4d4d4d;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background-color: #676767;
+  height: 0.3rem;
+  margin-top: 2.5rem;
+  margin-right: 2rem;
+  width: 100%;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: goldenrod;
+  border: 2px solid #332;
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+}
+input[type=range]:focus {
+  outline: none;
+}

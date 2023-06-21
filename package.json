@@ -1,0 +1,14 @@
+{
+  "name": "crash-game",
+  "version": "1.0.0",
+  "description": "Crash Game Patern",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^25.1.1"
+  }
+}

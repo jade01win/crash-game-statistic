@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - dashboard with Semantic UI and Chartist JS and legend plugin</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css'>
+<link rel='stylesheet' href='https://codepen.io/hougasian/pen/zEQBJV.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- menu -->
+<div class="ui top fixed inverted icon menu main">
+    <div class="item">
+      <div class="ui avatar image">
+        <img src="https://avatars2.githubusercontent.com/u/6231956?v=3&s=460">
+      </div>
+      <div class="content">
+        <div class="header">
+          Hello Kevin
+        </div>
+      </div>
+    </div>
+    <div class="search item">
+      <div class="ui transparent inverted icon input">
+        <input type="text" placeholder="Type to search...">
+        <i class="search inverted link icon"></i>
+      </div>
+    </div>
+
+    <div class="right menu primary">
+      <a class="item">
+        Menu Item
+      </a>
+      <a class="item">
+        Menu Item
+      </a>
+      <a class="ui dropdown item">
+        Menu Item
+        <i class="angle down icon"></i>
+        <div class="inverted menu">
+          <div class="item">
+            <i class="building icon"></i>
+            Dropdown Item 1
+          </div>
+          <div class="item">
+            <i class="building icon"></i>
+            Dropdown Item 2
+          </div>
+        </div>
+      </a>
+      <a class="item" href="#">
+        <i class="dashboard icon"></i>
+      </a>
+    </div>
+  </div>
+
+<div class="ui container dashboard grid">
+  <div class="ui horizontal divider">
+    <div class="ui basic small grey buttons">
+      <button class="ui icon button graph">
+        <i class="bar chart icon"></i>
+      </button>
+      <button class="ui icon button desktop">
+        <i class="desktop icon"></i>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="ui segment">
+        <div class="stage">
+          <i class="right angle remove icon"></i>
+          <div class="ct chart"></div>
+          <div class="rotated title">
+            <h3>Status</h3>
+          </div>
+        </div>
+        <div class="stage active">
+          <i class="right angle remove icon"></i>
+          <div class="content">
+            <div class="ui huge left floated statistic">
+              <div class="value">
+                10,000
+              </div>
+              <div class="label">
+                total
+              </div>
+              <div class="label">
+                <i class="olive up arrow icon"></i>
+                <span>999</span>
+                <i class="pink down arrow icon"></i>
+                <span>33</span>
+              </div>
+            </div>
+            <div class="ui small grey statistics">
+              <div class="statistic">
+                <div class="value">
+                  300 
+                  <small class="positive">
+                    <i class="olive mini leaf icon"></i>
+                    3%
+                  </small>
+                </div>
+                <div class="label">
+                  North
+                  <i class="olive up arrow icon"></i>
+                  <span>9</span>
+                  <i class="pink down arrow icon"></i>
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  200
+                  <small class="positive">
+                    <i class="olive mini leaf icon"></i>
+                    2%
+                  </small>
+                </div>
+                <div class="label">
+                  South
+                  <i class="olive up arrow icon"></i>
+                  <span>9</span>
+                  <i class="pink down arrow icon"></i>
+                  <span>3</span>                
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  100   
+                  <small class="neutral">
+                    <i class="mini leaf icon"></i>
+                    0%
+                  </small>
+                </div>
+                <div class="label">
+                  East
+                  <i class="olive up arrow icon"></i>
+                  <span>9</span>
+                  <i class="pink down arrow icon"></i>
+                  <span>3</span>                
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  400
+                  <small class="negative">
+                    <i class="pink mini leaf icon"></i>
+                    10%
+                  </small>
+                </div>
+                <div class="label">
+                  West
+                  <i class="olive up arrow icon"></i>
+                  <span>9</span>
+                  <i class="pink down arrow icon"></i>
+                  <span>3</span>                
+                </div>
+              </div>
+            </div>            
+          </div>
+          <div class="rotated title">
+            <h3>By Region</h3>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>  
+  <div class="row">
+    <div class="column">
+      <div class="ui segment">
+        <div class="stage">
+          <i class="right angle remove icon"></i>
+          <div class="app chart"></div>
+          <div class="title">
+            <h3>Weekly Stats</h3>
+          </div>
+        </div>
+        <div class="stage active">
+          <i class="right angle remove icon"></i>
+          <div class="content">
+            <div class="ui small grey statistics">
+              <div class="statistic">
+                <div class="value">
+                  100 
+                </div>
+                <div class="label">
+                  Initial
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  200
+                </div>
+                <div class="label">
+                  mailed
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  400
+                  <span class="negative">0</span>
+                </div>
+                <div class="label">
+                  returned <br>
+                  <span class="negative">incomplete</span>
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  400
+                  <span class="negative">30</span>
+                </div>
+                <div class="label">
+                  sent
+                  <span class="negative"><br>incomplete</span>
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  400
+                </div>
+                <div class="label">
+                  waiting
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  400 <span class="negative">100</span>
+                </div>
+                <div class="label">
+                  approved <br>
+                  <span class="negative">declined</span>
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value">
+                  50
+                </div>
+                <div class="label">
+                  lost
+                </div>
+              </div>
+            </div>            
+          </div>          
+          <div class="title">
+            <input type="range" min="1" max="52" value="45">
+            <h3><span>Viewing week <span class="week"></span></span>Weekly Stats</h3>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js'></script>
+<script src='https://codepen.io/hougasian/pen/zEQBJV.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/chartist/0.10.1/chartist.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/chartist-plugin-legend/0.6.1/chartist-plugin-legend.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
